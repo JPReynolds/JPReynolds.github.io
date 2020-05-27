@@ -1,0 +1,314 @@
+body {
+  background-color: rgba(223, 234, 241, 0.733);
+  margin: 0;
+  font-family: 'Lucida Console', Courier, monospace;
+}
+
+.page__home {
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: 0.5fr auto auto auto 2fr 0.5fr;
+  grid-template-columns: auto;
+  grid-template-areas: 'nav' 'image' 'title' 'description' 'tech' 'footer'; */
+}
+
+.navBar__header {
+  grid-area: nav;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-size: large;
+  border-bottom: solid 1px rgba(109, 136, 138, 0.644);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navBar__link {
+  padding: 10px 130px 10px 130px;
+}
+
+.title {
+  font-size: 38pt;
+}
+
+.title__home {
+  text-align: center;
+  margin: 0px 0 30px 0;
+}
+
+.img__me {
+  height: 125px;
+  width: 100px;
+  grid-area: image;
+  justify-self: center;
+  align-self: center;
+  border: solid 1px rgba(100, 99, 99, 0.644);
+  margin: 20px;
+  border-radius: 10%;
+}
+
+.description {
+  font-size: large;
+  grid-area: description;
+  justify-self: stretch;
+  text-align: center;
+
+  margin: 0;
+  padding: 20px 100px 20px 100px;
+  border-bottom: solid 1px rgba(100, 99, 99, 0.644);
+}
+
+.experience {
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.tech {
+  padding: 0;
+  font-size: large;
+  background-color: white;
+  padding: 20px 0px 20px 0px;
+}
+
+.tech__experience {
+  grid-area: experience;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight {
+  grid-area: highlights;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'highlightsTitle highlightsTitle highlightsTitle' '. highlightsCard .';
+}
+
+.tech__list1 {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  align-self: center;
+}
+
+.tech__list2 {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  align-self: center;
+}
+.tech__list3 {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  align-self: center;
+}
+
+.contactInfo--home {
+  display: flex;
+  grid-area: footer;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  border-top: solid 1px rgba(100, 99, 99, 0.644);
+}
+
+.contactInfo {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  border-top: solid 1px rgba(100, 99, 99, 0.644);
+}
+
+.contactInfo--projects {
+  grid-area: footer;
+}
+
+.contact__icons--img {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+}
+
+li {
+  margin: 0px 20px 0px 20px;
+  border-bottom: solid 2px;
+}
+
+.navBar {
+  padding: 0px 50px 0px 50px;
+}
+
+.info {
+  padding: 0px 25px 0px 0px;
+  margin: 0;
+}
+
+.img__worldARt {
+  height: 400px;
+  width: 200px;
+}
+
+.highlight__title {
+  grid-area: highlightsTitle;
+  text-align: center;
+  margin: 20px
+}
+
+.worldARt__card {
+  grid-area: highlightsCard;
+  background-color: rgba(223, 234, 241, 0.733);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'title title' 'info image';
+
+
+  border: solid 1px rgba(100, 99, 99, 0.644);
+  border-radius: 10px;
+}
+
+.worldARt__title {
+  grid-area: title;
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+}
+
+.img__worldARt {
+  grid-area: image;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.worldARt__info {
+  grid-area: info;
+  align-self: center;
+  padding-left: 10px;
+}
+
+/* projects page */
+
+.page__project {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: '. worldARt .' '. ncnews .';
+}
+
+.projects__card--ncnews {
+  grid-area: ncnews;
+}
+
+.page__project--header {
+  grid-area: nav;
+}
+
+.projects__title {
+  text-align: center;
+  margin: 30px 0 60px 0;
+}
+
+.projects__card--worldARt {
+  grid-area: worldARt;
+}
+
+.projects__card {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 3fr auto auto;
+  grid-template-areas: 'ncnewsImage ncnewsInfo' 'ncnewsImage gitHubLinks' 'ncnewsTech ncnewsTech' ;
+  background-color: white;
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
+  border-radius: 30px;
+  margin: 0 0 80px 0;
+  align-items: center;
+}
+
+.projects__card--image {
+  grid-area: ncnewsImage;
+  margin: 15px;
+  border: solid 2px rgba(100, 99, 99, 0.644);
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
+}
+
+.projects__card--info {
+  grid-area: ncnewsInfo;
+  text-align: center;
+  padding: 25px;
+  margin: 0;
+  align-self: center;
+  line-height: 30px;
+}
+
+.projects__card--tech {
+  grid-area: ncnewsTech;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 5px 0 5px 0;
+  border-top: solid 2px rgba(100, 99, 99, 0.644);
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.projects__card--techList {
+  border: solid 3px rgba(100, 99, 99, 0.644);
+  padding: 10px;
+  margin: 15px 10px 15px 10px;
+  border-radius: 10px;
+}
+
+#projects__worldARt--image {
+  height: 350px;
+  width: 175px;
+  border-radius: 30px;
+  /* transform: rotate(10deg); */
+}
+
+#projects__ncnews--image {
+  height: 250px;
+  width: 400px;
+}
+
+.gitHubLinks {
+  grid-area: gitHubLinks;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gitHubRepo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'hostBack hostFront' 'repoBack repoFront';
+}
+
+button {
+  margin: 0 30px 30px 30px;
+  width: 200px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 20px;
+  background-color: rgba(223, 234, 241, 0.733);
+}
+

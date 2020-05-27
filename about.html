@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Projects</title>
+  </head>
+  <body>
+    <div class="page__project">
+      <header class="page__project--header">
+        <nav class="navBar__header">
+          <a href="index.html" class="navBar__link">Home</a>
+          <a href="about.html" class="navBar__link">Projects</a>
+          <a href="contact.html" class="navBar__link">Contact</a>
+        </nav>
+      </header>
+      <h1 class="title projects__title">Projects</h1>
+      <div class="projects">
+        <section class="projects__card projects__card--worldARt">
+          <img
+            class="projects__card--image"
+            id="projects__worldARt--image"
+            src="./images/ncnews-mobile.png"
+            alt="worldARt"
+          />
+          <p class="projects__card--info">
+            I worked as part of a team of 4 to develop a full stack react native app in less than 2 weeks. The app acts as a virtual art gallery achieved through augmented reality. Almost all of the technology used was new to the team prior to starting the project. I gained experience on both the front-end and back-end. I was responsible for developing a severless back end using AWS.
+          </p>
+          <div class="gitHubLinks">
+            <button>gitHub Repository</button>
+            <button>worldARt Presentation</button>
+          </div>
+          <ul class="projects__card--tech">
+            <li class="projects__card--techList">React Native</li>
+            <li class="projects__card--techList">ViroReact</li>
+            <li class="projects__card--techList">API Gateway</li>
+            <li class="projects__card--techList">Amazon Lambda</li>
+            <li class="projects__card--techList">DynamoDB</li>
+            <li class="projects__card--techList">S3</li>
+          </ul>
+        </section>
+        <section class="projects__card projects__card--ncnews">
+          <img
+            class="projects__card--image"
+            id="projects__ncnews--image"
+            src="/images/ncnews2.png"
+            alt="ncnews"
+          />
+          <p class="projects__card--info">
+            I created a full stack news aggregation board, where users can vote on articles, post comments and vote on comments. It employs a RESTful API built using Node.js, Express.js and PostgreSQL. The front end was developed using React.js, HTML5 and CSS.
+          </p>
+          <div class="gitHubLinks" id="gitHubRepo">
+            <button>Hosted API</button>
+            <button>NC NEWS</button>
+            <button>Back End Repository</button>
+            <button>Front End Repository</button>
+          </div>
+          <ul class="projects__card--tech">
+            <li class="projects__card--techList">React</li>
+            <li class="projects__card--techList">CSS</li>
+            <li class="projects__card--techList">Express</li>
+            <li class="projects__card--techList">PostgreSQL</li>
+          </ul>
+        </section>
+      </div>
+      <footer class="contactInfo contactInfo--projects">
+        <p class="info">Email: jordanreynolds0611@gmail.com</p>
+        <p class="info">Telephone: +447725048514</p>
+        <a class="contact__icons"
+          ><img
+            class="contact__icons--img"
+            alt="gitHub__logo"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRCkRS80Iwwn63H-Qk1s6B2Y8lHj7zXCjJ-It1DFZX3oAjIYcW5&usqp=CAU"
+        /></a>
+        <a class="contact__icons"
+          ><img
+            class="contact__icons--img"
+            alt="linkedIn__logo"
+            src="data:image/png;base64,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"
+        /></a>
+      </footer>
+    </div>
+  </body>
+</html>
