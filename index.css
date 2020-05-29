@@ -1,32 +1,152 @@
-
-
 body {
   background-color: rgba(223, 234, 241, 0.733);
   margin: 0;
   font-family: 'Lucida Console', Courier, monospace;
 }
 
+/* Home */
 
-.page__home {
+@media only screen and (max-width: 1135px) {
+  .home {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .tech {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navBar {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBar__link {
+    padding: 5px !important;
+  }
+
+  .description__home {
+    padding: 15px !important;
+    font-size: 1em !important;
+  }
+
+  .img__me {
+    height: 150px !important;
+    width: 110px !important;
+  }
+
+  .title {
+    font-size: 2em !important;
+  }
+
+  .title__home {
+    margin: 10px !important;
+  }
+
+  .tech {
+    padding: 0 !important;
+  }
+
+  .tech__list {
+    font-size: small;
+  }
+
+  li {
+    margin: 8px !important;
+  }
+
+  .img__worldARt {
+    height: 150px !important;
+    width: 300px !important;
+  }
+
+  .worldARt__info {
+    font-size: small !important;
+  }
+
+  .contactInfo {
+    flex-wrap: wrap;
+    padding: 10px !important;
+  }
+
+  /* projects */
+
+  .page__project {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .projects__card--ncnews,
+  .projects__card--worldARt {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .gitHubLinks {
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: 125px !important;
+    height: 50px;
+    font-size: small !important;
+  }
+
+  .projects__card--info {
+    font-size: small !important;
+  }
+
+  #projects__worldARt--image {
+    height: 240px !important;
+    width: 120px !important;
+  }
+
+  #projects__ncnews--image {
+    height: 200px !important;
+    width: 300px !important;
+  }
+}
+
+.home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 2fr 0.5fr;
+  grid-template-rows: auto auto auto 0.5fr 1.5fr 0.3fr;
   grid-template-areas: 'homeNav homeNav' 'homeMe homeMe' 'homeTitle homeTitle' 'homeInfo homeInfo' 'homeTech homeHighlight' 'homeFooter homeFooter';
 }
 
-.page__home--header {
+.header__home {
   grid-area: homeNav
+}
+
+.navBar {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: large;
+  border-bottom: solid 1px rgba(109, 136, 138, 0.644);
+}
+
+.navBar__link {
+  text-decoration: none;
+  color: black;
 }
 
 .img__me {
   grid-area: homeMe;
-  height: 125px;
-  width: 100px;
+  height: 200px;
+  width: 150px;
   justify-self: center;
   align-self: center;
-  border: solid 1px rgba(100, 99, 99, 0.644);
   margin: 20px;
-  border-radius: 10%;
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
+}
+
+.title {
+  font-size: 38pt;
 }
 
 .title__home {
@@ -35,7 +155,7 @@ body {
   margin: 0px 0 30px 0;
 }
 
-.description {
+.description__home {
   font-size: large;
   grid-area: homeInfo;
   justify-self: stretch;
@@ -48,58 +168,28 @@ body {
 
 .tech {
   grid-area: homeTech;
-  padding: 0;
   font-size: large;
   background-color: white;
-  padding: 20px 0px 20px 0px;
-}
-
-.highlight {
-  grid-area: homeHighlight;
-  margin: 20px 50px 20px 50px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
-
-.navBar__header {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  font-size: large;
-  border-bottom: solid 1px rgba(109, 136, 138, 0.644);
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.navBar__link {
-  padding: 10px 130px 10px 130px;
-}
-
-.title {
-  font-size: 38pt;
-}
-
-.experience {
-  background-color: white;
-  text-align: center;
-  margin: 0;
-  padding-top: 20px;
+  padding: 60px 0px 70px 0px;
+  align-self: center;
 }
 
 .tech__experience {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 2em;
+}
+
+.experience {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 600;;
 }
 
 
-.tech__list1 {
+.tech__list {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -107,29 +197,36 @@ a {
   align-self: center;
 }
 
-.tech__list2 {
+.highlight {
+  grid-area: homeHighlight;
+  padding: 20px 70px 20px 50px;
   display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-  align-self: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color:white;
 }
-.tech__list3 {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
+
+.highlight__title {
+  margin: 0;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.img__worldARt {
+  height: 200px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.worldARt__info {
   align-self: center;
+  padding-left: 10px;
 }
 
 .contactInfo--home {
-  display: flex;
   grid-area: homeFooter;
-  list-style: none;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: white;
-  border-top: solid 1px rgba(100, 99, 99, 0.644);
 }
 
 .contactInfo {
@@ -141,6 +238,10 @@ a {
   border-top: solid 1px rgba(100, 99, 99, 0.644);
 }
 
+.info {
+  padding: 0px 25px 0px 0px;
+  margin: 0;
+}
 
 .contact__icons--img {
   height: 40px;
@@ -153,34 +254,6 @@ li {
   border-bottom: solid 2px;
 }
 
-.navBar {
-  padding: 0px 50px 0px 50px;
-}
-
-.info {
-  padding: 0px 25px 0px 0px;
-  margin: 0;
-}
-
-.img__worldARt {
-  height: 150px;
-  width: 300px;
-  padding: 10px;
-  border-radius: 40px;
-  grid-area: highlightImage;
-}
-
-.highlight__title {
-  grid-area: highlightTitle;
-  margin: 20px;
-  font-weight: 600;
-}
-
-.worldARt__info {
-  grid-area: highlightDescription;
-  align-self: center;
-  padding-left: 10px;
-}
 
 /* projects page */
 
@@ -195,8 +268,8 @@ li {
 .projects__card--ncnews {
   grid-area: ncnews;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 2fr 0.7fr 0.5fr;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: auto 2fr 0.7fr 0.5fr;
   grid-template-areas: 'ncnewsImage ncnewsTitle''ncnewsImage ncnewsInfo' 'gitHubLinks gitHubLinks' 'ncnewsTech ncnewsTech' ;
   border-radius: 30px;
   margin: 0 0 80px 0;
@@ -260,7 +333,7 @@ li {
   grid-area: ncnewsTech;
   display: flex;
   list-style: none;
-  justify-content: center;
+  justify-content: space-around;
   padding: 5px 0 5px 0;
   border-top: solid 2px rgba(100, 99, 99, 0.644);
   flex-wrap: wrap;
@@ -268,10 +341,9 @@ li {
 }
 
 .projects__card--techList {
-  border: solid 3px rgba(100, 99, 99, 0.644);
   padding: 10px;
   margin: 15px 10px 15px 10px;
-  border-radius: 10px;
+  text-align: center;
 }
 
 #projects__worldARt--image {
@@ -282,8 +354,8 @@ li {
 }
 
 #projects__ncnews--image {
-  height: 250px;
-  width: 400px;
+  height: auto;
+  width: 80%;
   margin: 30px
 }
 
