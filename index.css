@@ -260,7 +260,7 @@ li {
 .page__project {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: auto auto 4fr 4fr autod;
+  grid-template-rows: auto auto 4fr 4fr auto;
   grid-template-areas: 'projectsNav projectsNav projectsNav' 'projectsTitle projectsTitle projectsTitle' '. worldARt .' '. ncnews .' 'projectsFooter projectsFooter projectsFooter';
   background-color: white;
 }
@@ -389,6 +389,57 @@ li {
 /* contact */
 
 .page__contact {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 5fr 1fr;
+  grid-template-areas: 'contactNav contactNav contactNav' '. contactTitle .' '. contactInfo .' '. contactForm .' 'contactFooter contactFooter contactFooter';
+}
+
+.contact__header {
+  grid-area: contactNav;
+}
+
+.title__contact {
+  grid-area: contactTitle;
+}
+
+.info__contact {
+  grid-area: contactInfo;
+}
+
+.contactInfo__contact {
+  grid-area: contactFooter;
+}
+
+.form {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: white;
+  grid-area: contactForm;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto 4fr 1fr;
+  grid-template-areas: 'name' 'inputName' 'email' 'inputEmail' 'message' 'inputMessage' 'submit';
+}
+
+.form__message {
+  height: 100%;
+  width: 100%;
+}
+
+.form__label {
+  padding: 40px 0 10px 0;
+  align-self: end;
+}
+
+.form__input {
+  border: none;
+  border-bottom: solid;
+  border-color: rgba(223, 234, 241, 0.733);
+  font-size: 1em;
+  padding-bottom: 5px;
+}
+
+.form__submit {
+  margin: 40px;
 }
