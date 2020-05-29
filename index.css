@@ -52,6 +52,7 @@ body {
 
   .tech__list {
     font-size: small;
+    margin: 0;
   }
 
   li {
@@ -77,6 +78,7 @@ body {
   .page__project {
     display: flex !important;
     flex-direction: column;
+    width: 100%;
   }
 
   .projects__card--ncnews,
@@ -89,9 +91,9 @@ body {
     flex-wrap: wrap;
   }
 
-  button {
-    width: 125px !important;
-    height: 50px;
+  .gitHub__button {
+    width: 100px !important;
+    height: 40px;
     font-size: small !important;
   }
 
@@ -118,7 +120,7 @@ body {
 }
 
 .header__home {
-  grid-area: homeNav
+  grid-area: homeNav;
 }
 
 .navBar {
@@ -185,9 +187,8 @@ body {
   text-align: center;
   margin: 0;
   padding-top: 20px;
-  font-weight: 600;;
+  font-weight: 600;
 }
-
 
 .tech__list {
   display: flex;
@@ -204,7 +205,7 @@ body {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  background-color:white;
+  background-color: white;
 }
 
 .highlight__title {
@@ -254,14 +255,13 @@ li {
   border-bottom: solid 2px;
 }
 
-
 /* projects page */
 
 .page__project {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: auto auto 4fr 4fr autod;
-  grid-template-areas:'projectsNav projectsNav projectsNav' 'projectsTitle projectsTitle projectsTitle'  '. worldARt .' '. ncnews .' 'projectsFooter projectsFooter projectsFooter';
+  grid-template-areas: 'projectsNav projectsNav projectsNav' 'projectsTitle projectsTitle projectsTitle' '. worldARt .' '. ncnews .' 'projectsFooter projectsFooter projectsFooter';
   background-color: white;
 }
 
@@ -270,7 +270,7 @@ li {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   grid-template-rows: auto 2fr 0.7fr 0.5fr;
-  grid-template-areas: 'ncnewsImage ncnewsTitle''ncnewsImage ncnewsInfo' 'gitHubLinks gitHubLinks' 'ncnewsTech ncnewsTech' ;
+  grid-template-areas: 'ncnewsImage ncnewsTitle' 'ncnewsImage ncnewsInfo' 'gitHubLinks gitHubLinks' 'ncnewsTech ncnewsTech';
   border-radius: 30px;
   margin: 0 0 80px 0;
   align-items: center;
@@ -300,7 +300,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto 2fr 0.7fr 0.5fr;
-  grid-template-areas: 'ncnewsImage ncnewsTitle''ncnewsImage ncnewsInfo' 'ncnewsImage gitHubLinks' 'ncnewsTech ncnewsTech' ;
+  grid-template-areas: 'ncnewsImage ncnewsTitle' 'ncnewsImage ncnewsInfo' 'ncnewsImage gitHubLinks' 'ncnewsTech ncnewsTech';
   border-radius: 30px;
   margin: 0 0 80px 0;
   align-items: center;
@@ -356,7 +356,7 @@ li {
 #projects__ncnews--image {
   height: auto;
   width: 80%;
-  margin: 30px
+  margin: 30px;
 }
 
 .gitHubLinks {
@@ -366,17 +366,29 @@ li {
   align-items: center;
 }
 
-.gitHubLinks :hover{
+.gitHub__link :hover {
   box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
 }
 
-button {
-  margin: 0 30px 30px 30px;
-  width: 200px;
+.gitHub__link {
+}
+
+.gitHub__button {
+  margin: 10px;
+  width: 150px;
   height: 50px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1em;
   border-radius: 20px;
   background-color: rgba(223, 234, 241, 0.733);
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
+/* contact */
+
+.page__contact {
+  display: flex;
+  flex-direction: column;
+}
