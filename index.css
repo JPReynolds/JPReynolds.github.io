@@ -60,6 +60,10 @@
     margin: 8px !important;
   }
 
+  .link {
+    padding: 0;
+  }
+
   .img__worldARt {
     height: 150px !important;
     width: 300px !important;
