@@ -4,7 +4,7 @@
     flex-direction: column;
   }
 
-  .tech {
+  .tech__home {
     width: 100%;
   }
 
@@ -47,12 +47,12 @@
     margin: 10px !important;
   }
 
-  .tech {
+  .tech__home {
     padding: 0 !important;
   }
 
-  .tech__list {
-    font-size: small;
+  .list__tech {
+    font-size: 0.1em;
     margin: 0;
   }
 
@@ -67,6 +67,11 @@
 
   .worldARt__info {
     font-size: small !important;
+  }
+
+  .footer__home {
+    flex-direction: column;
+    padding: 10px !important;
   }
 
   .contactInfo {
@@ -227,7 +232,7 @@ footer {
 
 .home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-areas: 'homeNav homeNav' 'homeMe homeMe' 'homeTitle homeTitle' 'homeInfo homeInfo' 'homeTech homeHighlight' 'homeFooter homeFooter';
 }
@@ -342,6 +347,10 @@ footer {
   height: 40px;
   width: 40px;
   padding: 5px 10px 5px 10px;
+}
+
+.tech {
+  font-size: 0.8em;
 }
 
 /* projects page */
@@ -474,7 +483,6 @@ footer {
   border-top: solid 2px rgba(100, 99, 99, 0.644);
   flex-wrap: wrap;
   margin: 0;
-  font-size: 0.8em;
   font-weight: 500;
   letter-spacing: 0.05em;
 }
