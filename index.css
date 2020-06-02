@@ -59,8 +59,11 @@
   }
 
   .list__tech {
-    font-size: 0.1em;
     margin: 0;
+  }
+
+  .tech {
+    font-size: 0.8em !important;
   }
 
   li {
