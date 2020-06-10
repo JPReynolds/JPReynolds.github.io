@@ -31,6 +31,10 @@
     padding: 5px !important;
   }
 
+  .worldARt {
+    margin: 0 5px 0 5px !important;
+  }
+
   .header {
     display: flex !important;
     flex-direction: column;
@@ -39,6 +43,14 @@
   .description__home {
     padding: 15px !important;
     font-size: 1em !important;
+  }
+
+  .info__projects {
+    font-size: 0.9em !important;
+  }
+
+  .info__projects--ncnews {
+    padding: 0 !important;
   }
 
   .img__me {
@@ -132,16 +144,12 @@
   }
 
   .info__projects--ncnews {
-    padding: 10px 40px 30px 40px !important;
+    padding: 10px !important;
   }
 
   .gitHub__button {
     width: 100px !important;
     height: 40px;
-    font-size: small !important;
-  }
-
-  .projects__card--info {
     font-size: small !important;
   }
 
@@ -154,6 +162,7 @@
     height: 200px !important;
     width: 300px !important;
     margin-bottom: 10px !important;
+    margin-top: 60px !important;
   }
 }
 
@@ -288,7 +297,7 @@ footer {
 
 .tech__home {
   grid-area: homeTech;
-  padding: 60px 0px 70px 0px;
+  padding: 35px 70px 35px 50px;
   align-self: center;
   font-size: 1.1em;
   font-weight: 500;
@@ -390,21 +399,20 @@ footer {
   grid-area: ncnews;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 0.5fr auto 1fr auto 0.5fr;
+  grid-template-rows: auto auto 1fr auto 0.5fr;
   grid-template-areas: '. ncnewsTitle .' '. ncnewsImage .' '. ncnewsInfo .' '. ncnewsGit .' '. ncnewsTech .';
-  margin: 0 0 80px 0;
+  margin: 30px 50px 80px 50px;
   align-items: center;
 }
 
 .title__ncnews {
   grid-area: ncnewsTitle;
-  text-align: center;
 }
 
 .img__ncnews--projects {
   height: auto;
   width: 50%;
-  margin: 30px;
+  margin: 10px 30px 30px 30px;
   grid-area: ncnewsImage;
   border: solid 2px rgba(100, 99, 99, 0.644);
   box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
@@ -454,7 +462,7 @@ footer {
   text-align: center;
   padding: 20px 0 0 5px;
   margin: 0;
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: 600;
   letter-spacing: 0.05em;
 }
@@ -499,6 +507,7 @@ footer {
   margin: 0;
   font-weight: 500;
   letter-spacing: 0.05em;
+  font-size: 0.9em;
 }
 
 .tech__worldARt {
