@@ -46,7 +46,7 @@
   }
 
   .info__projects {
-    font-size: 0.9em !important;
+    font-size: 1em !important;
   }
 
   .info__projects--ncnews {
@@ -136,6 +136,7 @@
   .worldARt {
     display: flex !important;
     flex-direction: column;
+    margin: 0 5px 0 5px !important;
   }
 
   .links__ncnews {
@@ -144,7 +145,7 @@
   }
 
   .info__projects--ncnews {
-    padding: 10px !important;
+    padding: 0 !important;
   }
 
   .gitHub__button {
@@ -198,6 +199,7 @@ nav {
 
 .navBar__link:hover {
   border-bottom: solid 2px rgba(109, 136, 138, 0.644);
+  position: relative;
 }
 
 li {
@@ -427,7 +429,7 @@ footer {
   grid-area: projectsNav;
 }
 
-.name__projects {
+.name {
   grid-area: name;
   margin: 0;
   align-self: center;
@@ -619,13 +621,14 @@ footer {
 }
 
 .form__message {
-  width: 100%; /* Full width */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .form__label {
