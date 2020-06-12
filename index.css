@@ -8,6 +8,11 @@
     width: 100%;
   }
 
+  .about {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
   .navBar__link {
     padding: 10px 20px 10px 20px !important;
   }
@@ -27,6 +32,13 @@
     align-items: center;
   }
 
+  .about {
+    margin: 0 !important;
+    padding: 10px !important;
+    font-size: 0.8em !important;
+    width: 100% !important;
+  }
+
   .navBar__link {
     padding: 5px !important;
   }
@@ -41,7 +53,7 @@
   }
 
   .description__home {
-    padding: 15px !important;
+    padding: 5px !important;
     font-size: 1em !important;
   }
 
@@ -63,11 +75,11 @@
   }
 
   .title__home {
-    margin: 10px !important;
+    margin: 5px !important;
   }
 
   .tech__home {
-    padding: 0 !important;
+    padding: 20px !important;
   }
 
   .list__tech {
@@ -79,7 +91,7 @@
   }
 
   li {
-    margin: 8px !important;
+    margin: 3px !important;
   }
 
   .img__worldARt {
@@ -92,7 +104,6 @@
   }
 
   .footer__home {
-    flex-direction: column;
     padding: 10px !important;
   }
 
@@ -112,12 +123,14 @@
     margin: 15px !important;
   }
 
-  .title__contact {
-    padding-top: 10px;
+  .list__tech {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
   }
 
-  .contactInfo {
-    flex-direction: column;
+  .title__contact {
+    padding-top: 10px;
   }
 
   .info {
@@ -203,8 +216,7 @@ nav {
 }
 
 li {
-  margin: 0px 20px 0px 20px;
-  border-bottom: solid 2px;
+  margin: 0px 10px 0px 10px;
 }
 
 footer {
@@ -224,7 +236,6 @@ footer {
 
 .tech__home,
 .title__home,
-.experience,
 .title__highlight,
 .worldARt__info,
 .title__projects,
@@ -254,22 +265,31 @@ footer {
 
 .home {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-template-areas: 'homeNav homeNav' 'homeMe homeMe' 'homeTitle homeTitle' 'homeInfo homeInfo' 'homeTech homeHighlight' 'homeFooter homeFooter';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-areas: 'homeNav homeNav' 'homeMe homeMe' 'homeTitle homeTitle' 'homeInfo homeInfo' 'homeContact homeContact' 'homeHighlight homeTech' 'homeFooter homeFooter';
 }
 
 .header__home {
   grid-area: homeNav;
 }
 
+.contact {
+  grid-area: homeContact;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgba(109, 136, 138, 0.644);
+}
+
 .img__me {
   grid-area: homeMe;
-  height: 200px;
-  width: 150px;
+  height: 180px;
+  width: 135px;
   justify-self: center;
   align-self: center;
   margin: 20px;
+  border-radius: 5px;
   box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.356);
 }
 
@@ -290,8 +310,7 @@ footer {
   justify-self: stretch;
   text-align: center;
   margin: 0;
-  padding: 20px 160px 40px 160px;
-  border-bottom: solid 1px rgba(100, 99, 99, 0.644);
+  padding: 10px 160px 10px 160px;
   line-height: 30px;
   letter-spacing: 0.01em;
   color: hsla(0, 2%, 9%, 0.685);
@@ -299,9 +318,9 @@ footer {
 
 .tech__home {
   grid-area: homeTech;
-  padding: 35px 70px 35px 50px;
+  padding: 45px 60px 35px 40px;
   align-self: center;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.05em;
 }
@@ -310,15 +329,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 2em;
 }
 
 .experience {
-  text-align: center;
   margin: 0;
-  padding-top: 20px;
+  padding-bottom: 10px;
   font-weight: 600;
   letter-spacing: 0.1em;
+  text-align: center;
+  color: hsla(0, 7%, 3%, 0.791);
 }
 
 .list__tech {
@@ -329,20 +348,20 @@ footer {
   align-self: center;
 }
 
-.highlight {
+.about {
   grid-area: homeHighlight;
-  padding: 20px 70px 20px 50px;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+  background-color: white;
+  padding: 40px 70px 35px 90px;
 }
 
-.title__highlight {
+.about--me {
   margin: 0;
-  padding: 20px;
+  padding-bottom: 10px;
   font-weight: 600;
   letter-spacing: 0.1em;
+  color: hsla(0, 7%, 3%, 0.791);
 }
 
 .img__worldARt {
@@ -352,11 +371,11 @@ footer {
   border-radius: 40px;
 }
 
-.info__worldARt {
+.about--info {
   align-self: center;
-  padding-left: 10px;
   line-height: 30px;
   letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .footer__home {
@@ -366,11 +385,18 @@ footer {
 .info__contact {
   padding: 0px 25px 0px 0px;
   margin: 0;
+  font-size: 0.6em;
 }
 
 .contact__icons--img {
   height: 40px;
   width: 40px;
+  padding: 5px 10px 5px 10px;
+}
+
+.icon__footer {
+  height: 25px;
+  width: 25px;
   padding: 5px 10px 5px 10px;
 }
 
