@@ -184,6 +184,8 @@ body {
   background-color: rgba(223, 234, 241, 0.733);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 header {
