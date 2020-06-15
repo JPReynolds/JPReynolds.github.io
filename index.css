@@ -445,13 +445,9 @@ footer {
 .title__projects {
   grid-area: projectsTitle;
   margin: 0;
-  padding: 40px;
+  padding: 40px 0 0 0;
   letter-spacing: 0.1em;
   text-align: center;
-}
-
-.underline {
-  border-bottom: solid 2px rgba(109, 136, 138, 0.644);
 }
 
 .ncnews {
@@ -574,7 +570,7 @@ footer {
   list-style: none;
   justify-content: start;
   width: 100%;
-  padding: 20px 0 5px 0;
+  padding: 5px 0 5px 0;
   flex-wrap: wrap;
   margin: 0;
   font-weight: 500;
