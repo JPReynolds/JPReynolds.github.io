@@ -471,6 +471,7 @@ footer {
   grid-area: ncnewsTitle;
   text-align: start;
   align-self: start;
+  border-bottom: solid 3px rgba(109, 136, 138, 0.644);
 }
 
 .img__ncnews--projects {
@@ -539,6 +540,7 @@ footer {
   text-align: start;
   padding: 0;
   margin-top: 15px;
+  border-bottom: solid 3px rgba(109, 136, 138, 0.644);
 }
 
 .img__worldARt--projects {
@@ -573,7 +575,6 @@ footer {
   justify-content: start;
   width: 100%;
   padding: 20px 0 5px 0;
-  border-top: solid 2px rgba(100, 99, 99, 0.644);
   flex-wrap: wrap;
   margin: 0;
   font-weight: 500;
