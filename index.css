@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 @media only screen and (max-width: 1135px) {
   .home {
     grid-template-columns: 1fr 5fr 1fr !important;
@@ -34,8 +44,8 @@
   .about--info,
   .education--uni,
   .info__projects,
-  .tech__projects,
-  .tech {
+  .tech,
+  .interests {
     font-size: 0.7em !important;
   }
 
@@ -131,8 +141,8 @@
 
   .worldARt {
     grid-template-columns: 1fr 2fr !important;
-    grid-template-rows: auto auto auto auto !important;
-    grid-template-areas: 'worldARtImage worldARtTitle' 'worldARtImage worldARtTech' 'worldARtImage worldARtGit' 'worldARtInfo worldARtInfo' !important;
+    grid-template-rows: auto auto auto auto auto !important;
+    grid-template-areas: 'worldARtImage worldARtTitle' 'worldARtImage worldARtTech' 'worldARtImage worldARtRepo' 'worldARtImage worldARtPres' 'worldARtInfo worldARtInfo' !important;
     margin: 50px 15px 15px 15px !important;
   }
 
@@ -145,9 +155,9 @@
   }
 
   .ncnews {
-    grid-template-columns: 1fr 2fr !important;
-    grid-template-rows: auto auto auto auto !important;
-    grid-template-areas: 'ncnewsImage ncnewsTitle' 'ncnewsImage ncnewsTech' 'ncnewsImage ncnewsGit' 'ncnewsInfo ncnewsInfo' !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto !important;
+    grid-template-areas: 'ncnewsImage ncnewsTitle ncnewsTitle' 'ncnewsImage ncnewsTech ncnewsTech' 'ncnewsImage ncnewsAPI ncnewsHosted' 'ncnewsImage ncnewsBE ncnewsFE' 'ncnewsInfo ncnewsInfo ncnewsInfo' !important;
 
     margin: 50px 15px 50px 15px !important;
   }
@@ -165,6 +175,14 @@
   .tech__projects,
   .link__projects {
     align-self: start !important;
+  }
+
+  .gitHub__link {
+    font-size: 0.8em !important;
+  }
+
+  .list__tech--projects {
+    font-size: 0.8em !important;
   }
 }
 
@@ -387,13 +405,13 @@ footer,
 .contact__icons--img {
   height: 40px;
   width: 40px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px;
 }
 
 .icon__footer {
-  height: 25px;
-  width: 25px;
-  padding: 5px 10px 5px 10px;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
 }
 
 /* projects page */
@@ -415,9 +433,9 @@ footer,
 
 .card__projects {
   margin: 0px 50px 80px 50px;
-  padding: 15px;
+  padding: 10px;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .img__projects {
@@ -430,8 +448,8 @@ footer,
 }
 
 .title__projectsCard {
-  padding: 20px 0 0 5px;
-  margin: 0;
+  padding: 10px 0 0 0px;
+  margin: 3px;
   font-size: 1.2em;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -442,7 +460,7 @@ footer,
 
 .info__projects {
   text-align: start;
-  padding: 7px;
+  padding: 7px 7px 7px 0;
   margin: 0;
   align-self: center;
   line-height: 20px;
@@ -453,39 +471,54 @@ footer,
 .tech__projects {
   display: flex;
   list-style: none;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   padding: 5px 0 5px 0;
   flex-wrap: wrap;
   margin: 0;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
 }
 
 .list__tech--projects {
   margin: 3px !important;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 0.9em;
+  color: hsla(0, 7%, 3%, 0.534);
 }
 
 .title__links {
   color: hsla(0, 7%, 3%, 0.904) !important;
-  font-weight: 600 !important;
+  font-weight: 600;
+  font-size: 0.8em;
 }
 
 .link__projects {
-  justify-self: start;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-self: center;
 }
 
 .gitHub__link {
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
+  background-color: rgba(200, 212, 219, 0.479);
+  padding-top: 7px;
+  font-weight: 550;
+  font-size: 1em;
+  letter-spacing: 0.1em;
   text-decoration: none;
-  margin: 3px !important;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+
+  padding: 3px;
+  color: hsla(0, 7%, 3%, 0.534);
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 1px 1px rgba(112, 111, 112, 0.151); */
+}
+
+.link__worldARt--repo {
+  grid-area: worldARtRepo;
+}
+
+.link__worldARt--pres {
+  grid-area: worldARtPres;
 }
 
 .links {
@@ -503,9 +536,25 @@ a {
 .ncnews {
   grid-area: ncnews;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: 'ncnewsImage ncnewsTitle' 'ncnewsImage ncnewsInfo' 'ncnewsImage ncnewsTech' 'ncnewsImage ncnewsGit';
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 'ncnewsImage ncnewsTitle ncnewsTitle' 'ncnewsImage ncnewsInfo ncnewsInfo' 'ncnewsImage ncnewsTech ncnewsTech' 'ncnewsImage ncnewsAPI ncnewsHosted' 'ncnewsImage ncnewsBE ncnewsFE';
+}
+
+.ncnewsAPI {
+  grid-area: ncnewsAPI;
+}
+
+.ncnewsHosted {
+  grid-area: ncnewsHosted;
+}
+
+.ncnewsBE {
+  grid-area: ncnewsBE;
+}
+
+.ncnewsFE {
+  grid-area: ncnewsFE;
 }
 
 .title__ncnews {
@@ -532,9 +581,9 @@ a {
   margin-top: 50px;
   grid-area: worldARt;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: 'worldARtImage worldARtTitle' 'worldARtImage worldARtInfo' 'worldARtImage worldARtTech' 'worldARtImage worldARtGit';
+  grid-template-areas: 'worldARtImage worldARtTitle worldARtTitle' 'worldARtImage worldARtInfo worldARtInfo' 'worldARtImage worldARtTech worldARtTech' 'worldARtImage worldARtRepo worldARtPres';
 }
 
 .title__worldARt {
