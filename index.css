@@ -150,8 +150,9 @@ html {
     margin-right: 10px !important;
   }
 
-  .info__worldARt {
-    margin: 8px 5px 5px 5px !important;
+  .info__worldARt,
+  .info__projects--blackjack {
+    margin: 8px 2px 2px 2px !important;
   }
 
   .ncnews {
@@ -160,6 +161,17 @@ html {
     grid-template-areas: 'ncnewsImage ncnewsTitle ncnewsTitle' 'ncnewsImage ncnewsTech ncnewsTech' 'ncnewsImage ncnewsAPI ncnewsHosted' 'ncnewsImage ncnewsBE ncnewsFE' 'ncnewsInfo ncnewsInfo ncnewsInfo' !important;
 
     margin: 50px 15px 50px 15px !important;
+  }
+
+  .blackjack {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto !important;
+    grid-template-areas: 'blackjackImage blackjackImage' 'blackjackTitle blackjackTitle' 'blackjackInfo blackjackInfo' 'blackjackTech blackjackTech' 'blackjackHosted blackjackRepo' !important;
+    margin: 50px 15px 50px 15px !important;
+  }
+
+  .title__blackjack {
+    padding-top: 2px !important;
   }
 
   .info__projects--ncnews {
@@ -281,6 +293,7 @@ footer {
 .tech__home,
 .name__projects,
 .worldARt,
+.blackjack,
 .page__project--header,
 .name__contact,
 .form,
@@ -420,8 +433,8 @@ footer,
 .page__project {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: 'projectsNav projectsNav projectsNav' '. projectsTitle .' '. worldARt .' '. ncnews .' 'projectsFooter projectsFooter projectsFooter';
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas: 'projectsNav projectsNav projectsNav' '. projectsTitle .' '. worldARt .' '. ncnews .' '. blackjack .' 'projectsFooter projectsFooter projectsFooter';
 }
 
 .title__projects {
@@ -612,6 +625,44 @@ a {
 
 .links__ncnews {
   grid-area: ncnewsGit;
+}
+
+.blackjack {
+  grid-area: blackjack;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 'blackjackImage blackjackTitle' 'blackjackImage blackjackInfo' 'blackjackImage blackjackTech' 'blackjackHosted blackjackRepo';
+}
+
+.title__blackjack {
+  grid-area: blackjackTitle;
+}
+
+.img__blackjack--projects {
+  grid-area: blackjackImage;
+  height: 200px;
+  width: 325px;
+  margin: 0px 15px 10px 0px;
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.281);
+  border-radius: 10px;
+}
+
+.info__projects--blackjack {
+  grid-area: blackjackInfo;
+}
+
+.tech__blackjack {
+  grid-area: blackjackTech;
+  margin-bottom: 10px;
+}
+
+.blackjackApp {
+  grid-area: blackjackHosted;
+}
+
+.blackjackRepo {
+  grid-area: blackjackRepo;
 }
 
 /* contact */
