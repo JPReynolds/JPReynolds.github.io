@@ -185,6 +185,11 @@ html {
     margin-right: 2px !important;
   }
 
+  .img__blackjack--projects {
+    width: 100% !important;
+    height: auto !important;
+  }
+
   .tech__projects,
   .link__projects {
     align-self: start !important;
